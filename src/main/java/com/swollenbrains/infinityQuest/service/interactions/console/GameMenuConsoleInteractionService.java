@@ -22,7 +22,7 @@ public class GameMenuConsoleInteractionService implements GameMenuInteractionSer
         for(Fight fight : game.getFightList()) {
             ConsoleUtils.showOption(optionNumber++, FightOptionUtil.getOptionText(fight));
         }
-        ConsoleUtils.showOption(optionNumber, "Exit Game");
+        ConsoleUtils.showOption(optionNumber, "Save and Exit Game");
     }
 
     @Override

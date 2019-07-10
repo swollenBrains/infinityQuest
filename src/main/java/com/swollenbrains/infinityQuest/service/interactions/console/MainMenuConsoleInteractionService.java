@@ -17,7 +17,7 @@ public class MainMenuConsoleInteractionService implements MainMenuInteractionSer
     @Override
     public void showOptions() {
         ConsoleUtils.showMessage("\nWhat would you like to do? ");
-        ConsoleUtils.showOption(1, "Create New Game");
+        ConsoleUtils.showOption(1, "Create New Game (overrides previously saved game)");
         ConsoleUtils.showOption(2, "Restore Previous Game");
         ConsoleUtils.showOption(3, "Exit");
     }
