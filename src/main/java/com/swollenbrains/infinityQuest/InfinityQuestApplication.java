@@ -1,5 +1,8 @@
 package com.swollenbrains.infinityQuest;
 
+import com.swollenbrains.infinityQuest.service.MainMenu;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +14,16 @@ public class InfinityQuestApplication implements CommandLineRunner {
 		SpringApplication.run(InfinityQuestApplication.class, args);
 	}
 
+	private final MainMenu mainMenu;
+
+	@Autowired
+	public InfinityQuestApplication(MainMenu mainMenu) {
+		this.mainMenu = mainMenu;
+	}
+
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("\n\nHey Thanos. \n" + "The universe is exhausting its resources and to restore the balance, its necessary to get all 6 infinity stones.\n"
-				+ "Welcome to the quest for infinity stones.\n" + "\n" + "What would you like to do?\n" + "1- Create New Game\n" + "2- Restore Previous Game");
+		mainMenu.enterMenu();
 	}
+
 }
