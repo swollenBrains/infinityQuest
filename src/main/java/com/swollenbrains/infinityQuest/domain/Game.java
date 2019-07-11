@@ -20,11 +20,15 @@ public class Game implements Serializable {
         this.initializeFights();
     }
 
+    public Integer getScore() {
+        return this.getFightList().stream().map(fight -> fight.getFinalScore()).reduce(Integer::sum).orElse(0);
+    }
+
     private void initializeFights() {
-        this.fightList.add(new Fight(thanos, new Fighter("Captain America", 40)));
-        this.fightList.add(new Fight(thanos, new Fighter("Hulk", 45)));
-        this.fightList.add(new Fight(thanos, new Fighter("Thor", 50)));
-        this.fightList.add(new Fight(thanos, new Fighter("Iron Man", 55)));
+        this.fightList.add(new Fight(thanos, new Fighter("Captain America", 40), 100));
+        this.fightList.add(new Fight(thanos, new Fighter("Hulk", 45), 110));
+        this.fightList.add(new Fight(thanos, new Fighter("Thor", 50), 120));
+        this.fightList.add(new Fight(thanos, new Fighter("Iron Man", 55), 130));
     }
 
 }

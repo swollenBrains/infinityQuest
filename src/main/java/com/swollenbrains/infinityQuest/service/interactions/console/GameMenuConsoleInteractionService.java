@@ -29,6 +29,7 @@ public class GameMenuConsoleInteractionService implements GameMenuInteractionSer
     public void showGameState(Game game) {
         ConsoleUtils.showMessage(String.format("\n\nHey Thanos. Your current health is %d and you have %d lotions left", game.getThanos().getHealth(), game.getThanos()
                 .getLotions().size()));
+        ConsoleUtils.showMessage("Current Score : " + game.getScore());
     }
 
     @Override

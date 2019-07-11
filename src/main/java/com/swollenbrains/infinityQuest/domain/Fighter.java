@@ -22,7 +22,7 @@ public class Fighter implements Serializable {
         this.weapons = new ArrayList<>();
         this.health = initialHealth;
         this.lotions = new ArrayList<>();
-        pickWeapon(new HandGun(1, 20));
+        pickWeapon(new HandGun(10, 30));
     }
 
     public void pickWeapon(Weapon weapon) {

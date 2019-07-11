@@ -30,7 +30,7 @@ public class FightMenuConsoleInteractionService implements FightMenuInteractionS
         ConsoleUtils.showMessage("\nWhat would you like to do? ");
         ConsoleUtils.showOption(1, "Attack");
         ConsoleUtils.showOption(2, "Drink Lotion");
-        ConsoleUtils.showOption(3, "Surrender (You will lose)");
+        ConsoleUtils.showOption(3, "Surrender (Accept Defeat)");
     }
 
     @Override
